@@ -7,15 +7,15 @@ Each request from the client side needs a seperate HttpClient instance. If the s
 
 Example:
 
-CookieContainer SessionInfo = new CookieContainer();
+    CookieContainer SessionInfo = new CookieContainer();
 
-HttpClient MainPage = new HttpClient("https://www.facebook.com", SessionInfo);
-if (MainPage.GetResponseCode() == 200)
-{
-  HttpClient Login = new HttpClient("https://www.facebook.com/login.php?login_attempt=1&lwv=110", SessionInfo, "POST",
-    "Login info");
-  Console.WriteLine(Login.GetWebContent());
-}
+    HttpClient MainPage = new HttpClient("https://www.facebook.com", SessionInfo);
+    if (MainPage.GetResponseCode() == 200)
+    {
+      HttpClient Login = new HttpClient("https://www.facebook.com/login.php?login_attempt=1&lwv=110", SessionInfo, "POST",
+        "Login info");
+      Console.WriteLine(Login.GetWebContent());
+    }
 
 Be sure that "Login info" is from the correct http request. You can collect the POST body content string from the browser, it contains your credential info and maybe other private info. You can take the Google Chrome as a good example as the following reference:
 
