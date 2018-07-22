@@ -20,4 +20,5 @@ if (MainPage.GetResponseCode() == 200)
 Be sure that "Login info" is from the correct http request. You can collect the POST body content string from the browser, it contains your credential info and maybe other private info. You can take the Google Chrome as a good example as the following reference:
 
 https://stackoverflow.com/questions/4423061/view-http-headers-in-google-chrome
+
 https://www.mkyong.com/computer-tips/how-to-view-http-headers-in-google-chrome/
