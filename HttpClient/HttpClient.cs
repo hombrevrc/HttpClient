@@ -22,7 +22,7 @@ namespace HttpClient
          request.Accept = "*/*";
          request.CookieContainer = Cookies;
 
-         //request.Connection = "keep-alive";
+         // request.Connection = "keep-alive";
 
          if (Method.Equals("POST") == true)
          {
